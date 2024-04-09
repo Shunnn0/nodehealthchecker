@@ -18,5 +18,8 @@ free -g
 echo "print the cpu usage"
 nproc
 
-echo "printing a specific processes are running with column"
+echo "printing processes"
+ps -ef
+
+echo "printing a specific processes are running with column for this case we want to see only python related process and 2nd column of it"
 ps -ef | grep python | awk -F" " '{print $2}'
